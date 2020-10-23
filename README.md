@@ -1,2 +1,4 @@
 # ValidandoFormulario
- Validação de um formulario
+* HTML 1
+* CSS 2
+* JAVASCRIPT 3
