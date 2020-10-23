@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <style>
+
+      
+      input[type="submit"]{width:50px;background-color: brown;height:35;border:none;cursor:pointer;color:#fff;}
+      
+      body{
+          background-color: black;
+          color: brown;
+       
+          
+      }
+    
+      
+
+
+    </style>
+
+    <script type="text/javascript">
+    $("#id_cpf").mask("000.000-00");
+    $("#id_celular").mask("(00)00000-0000");
+    $("#id_nascimento").mask("00/00/0000");
+    $("#id_cep").mask("00000-000");
+    $("#id_senha").mask("00000000");
+    </script>
+
+    <script type="text/javascript">
+     function maiscula(){
+         var mai = document.getElementById("id_nome");
+         mai.value = mai.value.toUpperCase();
+ }
+    </script>
+
+    <script type="text/javascript">
+    function verificar(){
+        if(document.getElementById("id_nome").value == ""){
+            alert("Preencha o campo Nome.");
+            return false;
+        }
+        if(document.getElementById("id_cpf").value == ""){
+            alert("Preencha o campo Cpf");
+            return false;
+        }
+        if(document.getElementById("id_nascimento").value==""){
+            alert("Preencha o campo Nascimento");
+            return false;
+        }
+        if(document.getElementById("id_senha").value==""){
+            alert("Preencha o campo Senha");
+            return false;
+        }
+    }
+
+
+
+
+
+
+</script>
+
+    <meta name="viewport" content="width=<div class = "container" align= "center"id="form1"></div>
+</head>
+<body>
+    <div class = "container" align= "center"id="form1">
+        <div class = "row">
+            <form action="insere.php"metod="post"id="formulario" onsubmit="return verificar(this)">
+                <div class = "form-group">
+                
+     <div id = "nome"><label for= "nome">Nome</label>
+        <input type= "text" name = "id_nome" id= "id_nome" value="" onkeyup="maiscula(this)" class = "form-control"></div>
+    
+              
+      <div id= "cpf"><label for = "cpf">CPF:</label>
+        <input type= "text" name = "id_cpf" id= "id_cpf" value ="" class="form-control" placeholder="000.000.000-00">
+      </div>
+
+    <div id="nascimento"><label for = "nascimento">Data de Nascimento</label>
+        <input type= "text" name= "id_nscimento" id="id_nascimento" value=""class="form-control"placeholder="(00)00000-0000">
+    </div>
+        
+    
+    <div id="celular"><label for="celular">Celular:</label>
+            <input type="text"name= "id_celular" id="id_celular"value = ""
+            class = "form-control" placeholder="(00)00000-0000"></div>
+
+     <div id = "cep"><label for= "cep">CEP:</label>
+        <input type= "text" name= "id_cep" id="id_cep" value= "" class="form-control" placeholder="00000-00">
+        </div>
+        
+        <div id="senha"><label for = "senha">Senha</label>
+         <input type= "password"name="id_senha" id= "id_senha" value="form-control"placeholder="********">       
+        </div>
+
+        <div id="bot">
+            <button type = "reset" id= "botao">Deletar
+            </button>
+            </div>
+            <p> 
+         <input type="submit"value="Enviar"> 
+            </p>
+
+            <p>
+                Loading: <progress min="0"max="100" value="45"></progress>
+            </p>
+
+    <script>
+        alert('Seja bem-vindo')
+    </script>
+    
+</body>
+</html>
